@@ -1,0 +1,1 @@
+scp -r ec2-user@123.456.78.90:/home/ec2-user/myfolder /Users/yourusername/Desktop

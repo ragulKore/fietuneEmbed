@@ -84,13 +84,13 @@ def training():
     val_dataset = generate_qa_embedding_pairs(
     llm=OpenAI(model="gpt-3.5-turbo"), nodes=val_nodes
     )
-
+    train_dataset.save_json("train_dataset.json")
+    val_dataset.save_json("val_dataset.json")
 
     train_dataset = EmbeddingQAFinetuneDataset.from_json("train_dataset.json")
     val_dataset = EmbeddingQAFinetuneDataset.from_json("val_dataset.json")
 
-    train_dataset.save_json("train_dataset.json")
-    val_dataset.save_json("val_dataset.json")
+
 
     print("--Model Initialized--")
     finetune_engine = SentenceTransformersFinetuneEngine(
@@ -115,5 +115,5 @@ def training():
 
 if __name__ == "__main__":
     print('--Running script--')
-    training()
+    # training()
     
