@@ -1,1 +1,4 @@
-scp -r ec2-user@123.456.78.90:/home/ec2-user/myfolder /Users/yourusername/Desktop
+
+from ec2 to local
+scp -i "searchassist.pem" ec2-user@ec2-54-234-144-126.compute-1.amazonaws.com:/home/ec2-user/Python-3.11.8/fietuneEmbed/train_dataset.json E:/embed-finetune-aws/artifacts/train_dataset.json
+scp -i "searchassist.pem" ec2-user@ec2-54-234-144-126.compute-1.amazonaws.com:/home/ec2-user/Python-3.11.8/fietuneEmbed/val_dataset.json E:/embed-finetune-aws/artifacts/val_dataset.json
